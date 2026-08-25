@@ -26,16 +26,16 @@ export default function Page() {
       </section>
 
       {/* Innovation Section */}
-      <section className="py-20" style={{ background: 'linear-gradient(135deg, #192868 0%, #0d1a4a 100%)' }}>
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto mb-16">
-            <p className="text-[#4fa8e8] font-medium uppercase tracking-wider text-sm mb-4 font-['Roboto']">
+            <p className="text-[#398ffc] font-medium uppercase tracking-wider text-sm mb-4 font-['Roboto']">
               Desde 1998
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Outfit']">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#32373c] mb-6 font-['Outfit']">
               Innovación y Cuidado del Planeta en Cada Lavado
             </h2>
-            <p className="text-white/75 text-lg leading-relaxed font-['Roboto']">
+            <p className="text-gray-600 text-lg leading-relaxed font-['Roboto']">
               Cada prenda cuenta una historia y creemos que su limpieza no debería comprometer el medio ambiente. Nuestra tecnología avanzada y prácticas sostenibles garantizan un lavado impecable mientras reducimos nuestro impacto ecológico.
             </p>
           </div>
