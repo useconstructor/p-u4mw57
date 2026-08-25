@@ -3,17 +3,25 @@ import Link from 'next/link'
 export default function Page() {
   return (
     <main className="bg-white text-gray-900">
-      {/* Breadcrumb Section */}
-      <section className="bg-[#32373c] py-16 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center gap-2 text-white/80 text-sm mb-4">
-            <Link href="/" className="hover:text-white transition-colors">Inicio</Link>
-            <span>/</span>
-            <span className="text-white">Tecnología y Sostenibilidad</span>
+      {/* Hero Banner */}
+      <section className="relative overflow-hidden" style={{ paddingTop: '132px' }}>
+        <div className="relative h-[280px] md:h-[340px]">
+          <img
+            src="https://lavasecoprestigio.com/wp-content/uploads/2025/05/tecnologia-1.webp"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-[#192868]/60" />
+          <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+            <nav className="text-white/70 text-sm mb-3">
+              <Link href="/" className="hover:text-white">Inicio</Link>
+              <span className="mx-2">›</span>
+              <span className="text-white">Tecnología y Sostenibilidad</span>
+            </nav>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white">
+              Tecnología y <span className="text-[#4fa8e8]">Sostenibilidad</span>
+            </h1>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white font-['Outfit']">
-            Tecnología y Sostenibilidad
-          </h1>
         </div>
       </section>
 

@@ -3,46 +3,24 @@ import Link from "next/link";
 export default function Page() {
   return (
     <main className="bg-white text-gray-900">
-      {/* Hero Section */}
-      <section className="relative min-h-[600px] lg:min-h-[720px] overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+      {/* Hero Banner */}
+      <section className="relative overflow-hidden" style={{ paddingTop: '132px' }}>
+        <div className="relative h-[280px] md:h-[340px]">
           <img
-            src="https://lavasecoprestigio.com/wp-content/uploads/2025/02/bg-banner-ppal-prestigio-1-1920x1080.webp"
-            alt="Banner Principal"
-            className="w-full h-full object-cover"
+            src="https://lavasecoprestigio.com/wp-content/uploads/2025/05/cobertura.webp"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-
-        {/* Floating Circle Decorations */}
-        <img
-          src="https://lavasecoprestigio.com/wp-content/uploads/2025/02/circulo-flotante.png"
-          alt=""
-          className="absolute top-10 left-10 w-24 h-24 opacity-30 animate-bounce hidden lg:block"
-        />
-        <img
-          src="https://lavasecoprestigio.com/wp-content/uploads/2025/02/circulo-flotante.png"
-          alt=""
-          className="absolute bottom-20 right-20 w-32 h-32 opacity-20 animate-pulse hidden lg:block"
-        />
-
-        {/* Right Shape */}
-        <img
-          src="https://lavasecoprestigio.com/wp-content/uploads/2025/02/forma-derecha-banner.png"
-          alt=""
-          className="absolute right-0 top-0 h-full opacity-30 hidden xl:block"
-        />
-
-        {/* Content */}
-        <div className="relative z-10 flex items-center justify-center min-h-[600px] lg:min-h-[720px] px-4">
-          <div className="text-center text-white max-w-4xl mx-auto">
-            <h2 className="text-lg md:text-xl font-medium mb-2 font-['Outfit']">
-              Estamos Cerca de Ti
-            </h2>
-            <h3 className="text-sm md:text-base uppercase tracking-wider text-[#398ffc] mb-4 font-['Archivo']">
-              Más cerca de ti
-            </h3>
+          <div className="absolute inset-0 bg-[#192868]/60" />
+          <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+            <nav className="text-white/70 text-sm mb-3">
+              <Link href="/" className="hover:text-white">Inicio</Link>
+              <span className="mx-2">›</span>
+              <span className="text-white">Cobertura</span>
+            </nav>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white">
+              Nuestra <span className="text-[#4fa8e8]">Cobertura</span>
+            </h1>
           </div>
         </div>
       </section>
