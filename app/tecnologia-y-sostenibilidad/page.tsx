@@ -26,51 +26,43 @@ export default function Page() {
       </section>
 
       {/* Innovation Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20" style={{ background: 'linear-gradient(135deg, #192868 0%, #0d1a4a 100%)' }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto mb-16">
-            <p className="text-[#398ffc] font-medium uppercase tracking-wider text-sm mb-4 font-['Roboto']">
+            <p className="text-[#4fa8e8] font-medium uppercase tracking-wider text-sm mb-4 font-['Roboto']">
               Desde 1998
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#32373c] mb-6 font-['Outfit']">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-['Outfit']">
               Innovación y Cuidado del Planeta en Cada Lavado
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed font-['Roboto']">
+            <p className="text-white/75 text-lg leading-relaxed font-['Roboto']">
               Cada prenda cuenta una historia y creemos que su limpieza no debería comprometer el medio ambiente. Nuestra tecnología avanzada y prácticas sostenibles garantizan un lavado impecable mientras reducimos nuestro impacto ecológico.
             </p>
           </div>
 
-          {/* Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow border border-gray-100">
-              <div className="w-16 h-16 bg-[#398ffc]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-[#398ffc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                </svg>
+          {/* Feature Cards — staggered with circular icons + wave, matching home page style */}
+          <div className="grid md:grid-cols-3 gap-6 items-start mt-4">
+            {[
+              { num: '01', offset: false, title: 'Tecnología Wet Clean', desc: 'Usamos maquinaria de última generación con ciclos suaves y químicos biodegradables para cuidar cada prenda.', icon: <path d="M14 3C9.58 3 6 6.58 6 11c0 6.75 8 14 8 14s8-7.25 8-14c0-4.42-3.58-8-8-8zM14 2v0" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/> },
+              { num: '02', offset: true, title: 'Productos Biodegradables', desc: 'Nos preocupamos por el planeta con materiales biodegradables y prácticas ecológicas que protegen el medio ambiente.', icon: <><path d="M14 22C14 22 6 18 6 11a8 8 0 0116 0c0 7-8 11-8 11z" stroke="white" strokeWidth="2" strokeLinejoin="round"/><path d="M14 15l3-3M14 15l-2-2" stroke="white" strokeWidth="2" strokeLinecap="round"/></> },
+              { num: '03', offset: false, title: 'Secado Rápido de Tapetes', desc: 'Hemos incorporado maquinaria especializada para el lavado de tapetes con sistema de secado rápido.', icon: <><rect x="6" y="8" width="16" height="12" rx="2" stroke="white" strokeWidth="2"/><path d="M4 12h2M4 16h2M10 6V4M14 6V4" stroke="white" strokeWidth="2" strokeLinecap="round"/></> },
+            ].map((card) => (
+              <div key={card.num} className="relative" style={{ marginTop: card.offset ? '3rem' : '0' }}>
+                <div className="absolute -top-7 left-1/2 -translate-x-1/2 z-10 w-14 h-14 rounded-full bg-[#4fa8e8] flex items-center justify-center shadow-lg">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none">{card.icon}</svg>
+                </div>
+                <div className="bg-white rounded-2xl pt-12 pb-16 px-6 relative overflow-hidden shadow-lg border border-gray-100">
+                  <div className="absolute bottom-2 right-3 font-extrabold text-[#4fa8e8] select-none pointer-events-none" style={{ fontSize: '5rem', opacity: 0.12, lineHeight: 1 }}>{card.num}</div>
+                  <h4 className="font-bold text-[#192868] text-lg mb-2">{card.title}</h4>
+                  <p className="text-gray-600 text-sm">{card.desc}</p>
+                  <div className="absolute bottom-0 left-0 right-0 overflow-hidden h-10">
+                    <svg viewBox="0 0 300 40" preserveAspectRatio="none" className="w-full h-full" fill="#4fa8e8" fillOpacity="0.35">
+                      <path d="M0 20 Q75 0 150 20 Q225 40 300 20 L300 40 L0 40 Z" />
+                    </svg>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-[#32373c] mb-2 font-['Outfit']">Tecnología Wet Clean</h3>
-              <span className="text-[#398ffc] font-bold text-2xl">01</span>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow border border-gray-100">
-              <div className="w-16 h-16 bg-[#398ffc]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-[#398ffc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-[#32373c] mb-2 font-['Outfit']">Productos Biodegradables</h3>
-              <span className="text-[#398ffc] font-bold text-2xl">02</span>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow border border-gray-100">
-              <div className="w-16 h-16 bg-[#398ffc]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-[#398ffc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-[#32373c] mb-2 font-['Outfit']">Secado Rápido de Tapetes</h3>
-              <span className="text-[#398ffc] font-bold text-2xl">03</span>
-            </div>
+            ))}
           </div>
         </div>
       </section>
