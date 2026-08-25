@@ -5,13 +5,20 @@ export default function Page() {
     <main className="bg-white text-gray-900">
       {/* Hero Slider Section */}
       <section className="relative overflow-hidden" style={{ paddingTop: '132px' }}>
-        <div className="relative h-[480px] md:h-[580px]">
+        <div className="relative h-[520px] md:h-[620px]">
           <img
-            src="https://lavasecoprestigio.com/wp-content/uploads/2025/02/bg-banner-ppal-prestigio-2-1920x1080.webp"
+            src="https://lavasecoprestigio.com/wp-content/uploads/2025/02/bg-banner-ppal-prestigio-1-1920x1080.webp"
             alt=""
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/20" />
+          <div className="absolute inset-0 bg-black/30" />
+
+          {/* Floating circle decoration */}
+          <img
+            src="https://lavasecoprestigio.com/wp-content/uploads/2025/02/circulo-flotante.png"
+            alt=""
+            className="absolute top-16 left-10 w-20 h-20 md:w-32 md:h-32 opacity-40 pointer-events-none hidden md:block"
+          />
 
           {/* Slide arrows */}
           <button
@@ -28,6 +35,24 @@ export default function Page() {
           >
             ›
           </button>
+
+          {/* Slide text content */}
+          <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
+                Estilo, Elegancia y <span className="text-[#4fa8e8]">Resplandor</span> en Cada <span className="text-[#4fa8e8]">Prenda</span>
+              </h1>
+              <p className="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+                Confía en nuestra experiencia y tecnología avanzada para el cuidado de tus prendas y textiles. Desde 1998, redefiniendo la calidad en lavandería y tintorería.
+              </p>
+              <Link
+                href="/servicios-familiares/"
+                className="inline-block bg-[#192868] text-white px-8 py-4 rounded-md font-semibold hover:bg-[#0d1a4a] transition-colors"
+              >
+                Explora Nuestros Servicios
+              </Link>
+            </div>
+          </div>
 
           {/* Slide dots */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
