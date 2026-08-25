@@ -19,7 +19,7 @@ export default function Page() {
               <span className="text-white">Cobertura</span>
             </nav>
             <h1 className="text-3xl md:text-5xl font-extrabold text-white">
-              Nuestra <span className="text-[#4fa8e8]">Cobertura</span>
+              Estamos <span className="text-[#4fa8e8]">Cerca de Ti</span>
             </h1>
           </div>
         </div>
@@ -82,6 +82,44 @@ export default function Page() {
               >
                 {route.name}
               </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cómo Funciona el Servicio a Domicilio */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#192868" strokeWidth="1.5"/><path d="M10 6v4l2.5 2.5" stroke="#192868" strokeWidth="1.5" strokeLinecap="round"/></svg>
+              <span className="text-[#192868] font-semibold text-sm uppercase tracking-wider">¿Quieres recibir tu ropa limpia sin salir de casa?</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#192868] mb-1">Cómo Funciona el</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#4fa8e8]">Servicio a Domicilio</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+            {[
+              { num: '01', title: 'Solicita el Servicio', desc: 'Contáctanos por WhatsApp o teléfono y programa la recogida.' },
+              { num: '02', title: 'Recolección en tu Ubicación', desc: 'Nuestro equipo recoge tus prendas en la fecha y hora programadas.' },
+              { num: '03', title: 'Limpieza Profesional', desc: 'Aplicamos los mejores procesos para garantizar resultados impecables.' },
+              { num: '04', title: 'Entrega a Domicilio', desc: 'Recibe tus prendas frescas y listas para usar en la comodidad de tu hogar.' },
+            ].map((step, i) => (
+              <div key={step.num} className="relative" style={{ marginTop: i % 2 === 1 ? '2rem' : '0' }}>
+                <div className="absolute -top-7 left-1/2 -translate-x-1/2 z-10 w-14 h-14 rounded-full bg-[#4fa8e8] flex items-center justify-center shadow-lg">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="white" strokeWidth="2"/></svg>
+                </div>
+                <div className="bg-white border border-gray-100 shadow-md rounded-2xl pt-12 pb-14 px-6 relative overflow-hidden text-center">
+                  <div className="absolute bottom-2 right-3 font-extrabold text-[#4fa8e8] select-none" style={{ fontSize: '4rem', opacity: 0.1, lineHeight: 1 }}>{step.num}</div>
+                  <h4 className="font-bold text-[#192868] text-sm mb-2">{step.title}</h4>
+                  <p className="text-gray-500 text-xs">{step.desc}</p>
+                  <div className="absolute bottom-0 left-0 right-0 overflow-hidden h-8">
+                    <svg viewBox="0 0 300 32" preserveAspectRatio="none" className="w-full h-full" fill="#4fa8e8" fillOpacity="0.3">
+                      <path d="M0 16 Q75 0 150 16 Q225 32 300 16 L300 32 L0 32 Z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
