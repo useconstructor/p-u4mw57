@@ -5,31 +5,31 @@ const posts = [
     slug: 'errores-comunes-lavar-ropa',
     title: 'Errores Comunes al Lavar Ropa en Casa (Y Cómo Evitarlos)',
     date: 'Mayo 6, 2025',
-    img: 'https://lavasecoprestigio.com/wp-content/uploads/2025/02/img-blog-1.webp',
+    img: 'https://lavasecoprestigio.com/wp-content/uploads/2025/02/blog-0.webp',
   },
   {
     slug: 'cada-cuanto-llevar-ropa-lavanderia',
     title: '¿Cada Cuánto Deberías Llevar Tu Ropa a la Lavandería Profesional?',
     date: 'Marzo 21, 2025',
-    img: 'https://lavasecoprestigio.com/wp-content/uploads/2025/02/img-blog-2.webp',
+    img: 'https://lavasecoprestigio.com/wp-content/uploads/2025/05/img-blog-p2-.webp',
   },
   {
     slug: '5-consejos-mantener-prendas-impecables',
     title: '5 Consejos para Mantener Tus Prendas Impecables',
     date: 'Febrero 12, 2025',
-    img: 'https://lavasecoprestigio.com/wp-content/uploads/2025/02/img-blog-3.webp',
+    img: 'https://lavasecoprestigio.com/wp-content/uploads/2025/02/blog-2.webp',
   },
   {
     slug: 'por-que-elegir-lavanderia-ecologica',
     title: '¿Por Qué Elegir un Servicio de Lavandería Ecológica?',
     date: 'Febrero 1, 2025',
-    img: 'https://lavasecoprestigio.com/wp-content/uploads/2025/05/nosotros-lp-6-640x640.webp',
+    img: 'https://lavasecoprestigio.com/wp-content/uploads/2025/05/img-blog-p2-1.webp',
   },
   {
     slug: 'conoce-nuestros-beneficios-exclusivos',
     title: 'Conoce Nuestros Beneficios Exclusivos para Clientes',
     date: 'Enero 20, 2025',
-    img: 'https://lavasecoprestigio.com/wp-content/uploads/2025/05/servicios-empresariales-tabs.webp',
+    img: 'https://lavasecoprestigio.com/wp-content/uploads/2025/05/img-blog-p2-2.webp',
   },
 ]
 
@@ -40,7 +40,7 @@ export default function Page() {
       <section className="relative overflow-hidden" style={{ paddingTop: '132px' }}>
         <div className="relative h-[280px] md:h-[340px]">
           <img
-            src="https://lavasecoprestigio.com/wp-content/uploads/2025/02/img-home-prestigio-2.webp"
+            src="https://lavasecoprestigio.com/wp-content/uploads/2024/06/bg-blog.webp"
             alt=""
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
