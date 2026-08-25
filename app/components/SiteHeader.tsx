@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Menu, X, MapPin, Phone } from 'lucide-react'
+import { ChevronDown, Menu, X, MapPin, Phone, MessageCircle } from 'lucide-react'
 
 export default function SiteHeader() {
   const [openMenu, setOpenMenu] = useState<string | null>(null)
@@ -21,6 +21,8 @@ export default function SiteHeader() {
     },
     { label: 'Cobertura', href: '/cobertura/' },
     { label: 'Tecnología y Sostenibilidad', href: '/tecnologia-y-sostenibilidad/' },
+    { label: 'Blog', href: '/blog/' },
+    { label: 'Contacto', href: '/contacto/' },
   ]
 
   const topBarLinks = [
@@ -44,7 +46,7 @@ export default function SiteHeader() {
           <div className="flex flex-col sm:flex-row justify-between items-center py-2 text-sm">
             <div className="hidden md:flex items-center space-x-6">
               <a
-                href="https://ul.waze.com/ul?place=ChIJXUFE-vSHP44R0FHGtEsLyhU&ll=4.86292770%2C-74.05153420&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                href="https://ul.waze.com/ul?place=ChIJXUFE-vSHP44R0FHGtEsLyhU&ll=4.86292770%2C-74.05153420&navigate=yes"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 className="flex items-center hover:text-gray-300 transition-colors"
@@ -98,7 +100,7 @@ export default function SiteHeader() {
                     <>
                       <button
                         onClick={() => handleDropdownClick(item.label)}
-                        className="flex items-center px-4 py-2 text-[#32373c] hover:text-[#3b3d42] font-medium transition-colors"
+                        className="flex items-center px-3 py-2 text-[#32373c] hover:text-[#192868] font-medium transition-colors text-sm"
                       >
                         {item.label}
                         <ChevronDown
@@ -125,7 +127,7 @@ export default function SiteHeader() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="px-4 py-2 text-[#32373c] hover:text-[#3b3d42] font-medium transition-colors"
+                      className="px-3 py-2 text-[#32373c] hover:text-[#192868] font-medium transition-colors text-sm"
                     >
                       {item.label}
                     </Link>
@@ -140,17 +142,17 @@ export default function SiteHeader() {
                 href="https://api.whatsapp.com/send/?phone=573504520414&text=%C2%A1Hola!.+Necesito+m%C3%A1s+informaci%C3%B3n+sobre+...&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="inline-flex items-center px-6 py-3 bg-[#32373c] text-white font-medium rounded-md hover:bg-[#3b3d42] transition-colors"
+                className="inline-flex items-center px-5 py-3 bg-[#192868] text-white font-medium rounded-md hover:bg-[#0d1a4a] transition-colors text-sm"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                Contáctanos
+                <MessageCircle className="w-4 h-4 mr-2" />
+                Habla con un asesor
               </a>
             </div>
 
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-[#32373c] hover:text-[#3b3d42] transition-colors"
+              className="lg:hidden p-2 text-[#32373c] hover:text-[#192868] transition-colors"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -167,13 +169,12 @@ export default function SiteHeader() {
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 top-[132px] bg-white z-40 overflow-y-auto">
           <div className="px-4 py-6 space-y-4">
-            {/* Mobile contact info */}
             <div className="pb-4 border-b border-gray-200 space-y-3">
               <a
-                href="https://ul.waze.com/ul?place=ChIJXUFE-vSHP44R0FHGtEsLyhU&ll=4.86292770%2C-74.05153420&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                href="https://ul.waze.com/ul?place=ChIJXUFE-vSHP44R0FHGtEsLyhU&ll=4.86292770%2C-74.05153420&navigate=yes"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="flex items-center text-[#32373c] hover:text-[#3b3d42] transition-colors"
+                className="flex items-center text-[#32373c] hover:text-[#192868] transition-colors"
               >
                 <MapPin className="w-5 h-5 mr-3" />
                 <span className="text-sm">Planta Principal - Av Pradilla No 3-57 Chía</span>
@@ -182,14 +183,12 @@ export default function SiteHeader() {
                 href="https://api.whatsapp.com/send/?phone=573504520414&text=%C2%A1Hola!.+Necesito+m%C3%A1s+informaci%C3%B3n+sobre+...&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="flex items-center text-[#32373c] hover:text-[#3b3d42] transition-colors"
+                className="flex items-center text-[#32373c] hover:text-[#192868] transition-colors"
               >
                 <Phone className="w-5 h-5 mr-3" />
                 <span className="text-sm">(+57) 350 4520414</span>
               </a>
             </div>
-
-            {/* Mobile nav items */}
             {navItems.map((item) => (
               <div key={item.label} className="border-b border-gray-100 pb-4">
                 {item.children ? (
@@ -199,11 +198,7 @@ export default function SiteHeader() {
                       className="flex items-center justify-between w-full py-2 text-[#32373c] font-medium"
                     >
                       {item.label}
-                      <ChevronDown
-                        className={`w-5 h-5 transition-transform ${
-                          openMenu === item.label ? 'rotate-180' : ''
-                        }`}
-                      />
+                      <ChevronDown className={`w-5 h-5 transition-transform ${openMenu === item.label ? 'rotate-180' : ''}`} />
                     </button>
                     {openMenu === item.label && (
                       <div className="mt-2 ml-4 space-y-2">
@@ -211,11 +206,8 @@ export default function SiteHeader() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            onClick={() => {
-                              closeDropdown()
-                              setMobileMenuOpen(false)
-                            }}
-                            className="block py-2 text-sm text-gray-600 hover:text-[#32373c] transition-colors"
+                            onClick={() => { closeDropdown(); setMobileMenuOpen(false) }}
+                            className="block py-2 text-sm text-gray-600 hover:text-[#192868] transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -234,31 +226,15 @@ export default function SiteHeader() {
                 )}
               </div>
             ))}
-
-            {/* Mobile top bar links */}
-            <div className="pt-4 space-y-3">
-              {topBarLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-sm text-gray-600 hover:text-[#32373c] transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-
-            {/* Mobile CTA */}
             <div className="pt-6">
               <a
                 href="https://api.whatsapp.com/send/?phone=573504520414&text=%C2%A1Hola!.+Necesito+m%C3%A1s+informaci%C3%B3n+sobre+...&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="flex items-center justify-center w-full px-6 py-3 bg-[#32373c] text-white font-medium rounded-md hover:bg-[#3b3d42] transition-colors"
+                className="flex items-center justify-center w-full px-6 py-3 bg-[#192868] text-white font-medium rounded-md hover:bg-[#0d1a4a] transition-colors"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Contáctanos por WhatsApp
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Habla con un asesor
               </a>
             </div>
           </div>
