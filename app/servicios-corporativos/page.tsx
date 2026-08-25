@@ -7,7 +7,7 @@ export default function Page() {
       <section className="relative overflow-hidden" style={{ paddingTop: '132px' }}>
         <div className="relative h-[280px] md:h-[340px]">
           <img
-            src="https://lavasecoprestigio.com/wp-content/uploads/2025/05/servicios-corporativos.webp"
+            src="https://lavasecoprestigio.com/wp-content/uploads/2025/05/servicios-empresariales-tabs.webp"
             alt=""
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
